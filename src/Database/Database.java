@@ -5,20 +5,22 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class Database {
-    
+
        // create connection
-    
     public static Connection con;
-    
-    public static Connection getConnection() throws Exception{
-        
-          String dbpath = "jdbc:mysql://localhost:3306/timetablemanagementsystem";
-          String user = "root";
-          String pass ="1234";
-        
+
+    public static Connection getConnection() throws Exception {
+
+        String dbpath = "jdbc:mysql://localhost:3306/timetablemanagementsystem";
+        String user = "root";
+        String pass = "1234";
+
+          //timetablemanagementsystem
 //        try{
 //          File file = new File("e:\\RZKTechnology\\Configurations\\db_config.txt");
 //          dbpath = Files.readAllLines(file.toPath()).get(0);
@@ -30,28 +32,36 @@ public class Database {
 //        System.out.println(e);
 //      }
 //        
-        
-        
-        if(con == null){
-        Class.forName("com.mysql.jdbc.Driver");
+        if (con == null) {
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(dbpath, user, pass);
         }
-        
-        
+
         return con;
     }
-    
+
     //save update delete
-    
-    public static void setData(String sql)throws Exception{  
-       Database.getConnection().createStatement().executeUpdate(sql);
+    public static void setData(String sql) throws Exception {
+        Database.getConnection().createStatement().executeUpdate(sql);
     }
-    
+
     // search
-    
-    public static ResultSet getData(String sql)throws Exception{
+    public static ResultSet getData(String sql) throws Exception {
+        ResultSet executeQuery = Database.getConnection().createStatement().executeQuery(sql);
+        return executeQuery;
+    }
+
+    public static ResultSet getRowCount(String sql) throws Exception {
         ResultSet executeQuery = Database.getConnection().createStatement().executeQuery(sql);
         return executeQuery;
     }
     
+    public static ResultSet getlatestDetails(String sql) throws Exception {
+        ResultSet executeQuery = Database.getConnection().createStatement().executeQuery(sql);
+        return executeQuery;
+    }
+    
+    
+
+//     Statement stmt = con.createStatement();
 }

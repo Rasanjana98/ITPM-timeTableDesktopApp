@@ -95,7 +95,7 @@ public class Home extends javax.swing.JFrame {
         jPanel1.add(sujectsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 285, 64));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/clock.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
         workingdaysHoursButtonHome.setText("WORKING DAYS & HOURS");
         workingdaysHoursButtonHome.addActionListener(new java.awt.event.ActionListener() {
@@ -182,9 +182,9 @@ public class Home extends javax.swing.JFrame {
         jDesktopPane1.removeAll();
         try {
 
-            Location lecturer = new Location();
-            jDesktopPane1.add(lecturer).setVisible(true);
-            lecturer.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+            Location location = new Location();
+            jDesktopPane1.add(location).setVisible(true);
+            location.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -193,8 +193,17 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_locationButtonHomeActionPerformed
 
     private void statisticsButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statisticsButtonHomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_statisticsButtonHomeActionPerformed
+        jDesktopPane1.removeAll();
+        try {
+
+            Statistics statistics = new Statistics();
+            jDesktopPane1.add(statistics).setVisible(true);
+            statistics.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }    }//GEN-LAST:event_statisticsButtonHomeActionPerformed
 
     /**
      * @param args the command line arguments

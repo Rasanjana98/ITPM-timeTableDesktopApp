@@ -5,18 +5,34 @@
  */
 package timetablemanagementsystem_we_r_05;
 
+import Database.Database;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
+
 /**
  *
  * @author geema
  */
 public class Location extends javax.swing.JPanel {
 
+    String type;
+
     /**
-     * Creates new form lecturer
+     * Creates new form Test
      */
     public Location() {
         initComponents();
+        locationLoadTable();
     }
+    
+    PreparedStatement update;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,34 +43,596 @@ public class Location extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jLabel3 = new javax.swing.JLabel();
+        capacityTF = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        RoomNameTF = new javax.swing.JTextField();
+        lectureHallRB = new javax.swing.JRadioButton();
+        labRB = new javax.swing.JRadioButton();
+        locationSaveButton = new javax.swing.JButton();
+        locationClearButton = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
+        jInternalFrame2 = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        RoomNameTF1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lectureHallRB1 = new javax.swing.JRadioButton();
+        labRB1 = new javax.swing.JRadioButton();
+        capacityTF1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        updateButtonManageLocation = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        clearButtonManagelocation = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        locationID = new javax.swing.JTextField();
+        jComboBox2 = new javax.swing.JComboBox();
 
-        jLabel1.setText("jLabel1");
+        jInternalFrame1.setVisible(true);
 
-        jLabel2.setText("LOCATION DETAILS");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel3.setText("Add Location");
+
+        capacityTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capacityTFActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("Capacity");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setText("Room Type");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("Room Name");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Building Name");
+
+        RoomNameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RoomNameTFActionPerformed(evt);
+            }
+        });
+
+        lectureHallRB.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lectureHallRB.setText("Lecture Hall");
+        lectureHallRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lectureHallRBActionPerformed(evt);
+            }
+        });
+
+        labRB.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        labRB.setText("Laboratory");
+        labRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                labRBActionPerformed(evt);
+            }
+        });
+
+        locationSaveButton.setText("SAVE");
+        locationSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationSaveButtonActionPerformed(evt);
+            }
+        });
+
+        locationClearButton.setText("CLEAR");
+        locationClearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationClearButtonActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Main Building", "New Building" }));
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addGap(504, 504, 504)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                    .addComponent(lectureHallRB)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labRB))
+                                .addComponent(RoomNameTF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE))))
+                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(capacityTF, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                        .addComponent(locationSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                        .addComponent(locationClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(276, 276, 276))
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel3)
+                .addGap(68, 68, 68)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(43, 43, 43)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RoomNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(69, 69, 69)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lectureHallRB)
+                    .addComponent(labRB))
+                .addGap(85, 85, 85)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(capacityTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(116, 116, 116)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(locationClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(locationSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Add Location", jInternalFrame1);
+
+        jInternalFrame2.setVisible(true);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "id", "Building Name", "Room Name", "Room Type", "Capacity"
+            }
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        RoomNameTF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RoomNameTF1ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("Room Name");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Building Name");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("Room Type");
+
+        lectureHallRB1.setText("Lecture Hall");
+        lectureHallRB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lectureHallRB1ActionPerformed(evt);
+            }
+        });
+
+        labRB1.setText("Laboratory");
+        labRB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                labRB1ActionPerformed(evt);
+            }
+        });
+
+        capacityTF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capacityTF1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setText("Capacity");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel11.setText("Manage Locations");
+
+        updateButtonManageLocation.setText("UPDATE");
+        updateButtonManageLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonManageLocationActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("DELETE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        clearButtonManagelocation.setText("CLEAR");
+        clearButtonManagelocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonManagelocationActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setText("location ID");
+
+        locationID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationIDActionPerformed(evt);
+            }
+        });
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Main Building", "New Building" }));
+
+        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
+        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
+        jInternalFrame2Layout.setHorizontalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame2Layout.createSequentialGroup()
+                .addContainerGap(253, Short.MAX_VALUE)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame2Layout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(444, 444, 444))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame2Layout.createSequentialGroup()
+                        .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                                .addComponent(updateButtonManageLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(clearButtonManagelocation, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(locationID, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(capacityTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                                            .addComponent(lectureHallRB1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(labRB1))
+                                        .addComponent(RoomNameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(214, 214, 214))))
+        );
+        jInternalFrame2Layout.setVerticalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(locationID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                        .addComponent(jComboBox2)
+                        .addGap(2, 2, 2))
+                    .addComponent(jLabel8))
+                .addGap(36, 36, 36)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(RoomNameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(lectureHallRB1)
+                    .addComponent(labRB1))
+                .addGap(18, 18, 18)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(capacityTF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(80, 80, 80)
+                .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(updateButtonManageLocation)
+                    .addComponent(clearButtonManagelocation))
+                .addGap(233, 233, 233))
+        );
+
+        jTabbedPane1.addTab("Manage Location", jInternalFrame2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(464, 464, 464)
-                .addComponent(jLabel2)
-                .addContainerGap(640, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(jLabel2)
-                .addContainerGap(465, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void capacityTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacityTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacityTFActionPerformed
+
+    private void RoomNameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomNameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RoomNameTFActionPerformed
+
+    private void lectureHallRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lectureHallRBActionPerformed
+
+        // TODO ad code here:
+        if (lectureHallRB.isSelected()) {
+            type = "Lecture Hall";
+        }
+    }//GEN-LAST:event_lectureHallRBActionPerformed
+
+    private void labRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labRBActionPerformed
+
+        if (labRB.isSelected()) {
+            type = "Laboratory";
+        }
+    }//GEN-LAST:event_labRBActionPerformed
+
+    private void locationSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationSaveButtonActionPerformed
+        try {
+            Database.setData("INSERT INTO locations VALUES('0','" + jComboBox1.getSelectedItem()+ "','" + RoomNameTF.getText() + "','" + capacityTF.getText() + "','" + type + "')");
+        } catch (Exception ex) {
+            Logger.getLogger(Location.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JOptionPane.showMessageDialog(null, "Item Added Suceessfully !");
+        locationLoadTable();
+        clearFields();
+    }//GEN-LAST:event_locationSaveButtonActionPerformed
+
+    private void locationClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationClearButtonActionPerformed
+         clearFields();
+    }//GEN-LAST:event_locationClearButtonActionPerformed
+
+    private void RoomNameTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomNameTF1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RoomNameTF1ActionPerformed
+
+    private void lectureHallRB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lectureHallRB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lectureHallRB1ActionPerformed
+
+    private void labRB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labRB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_labRB1ActionPerformed
+
+    private void capacityTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacityTF1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacityTF1ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+            locationID.setEditable(false);
+        // TODO add your handling code here:
+
+        DefaultTableModel d1 = (DefaultTableModel) jTable1.getModel();
+        int selectIndex = jTable1.getSelectedRow();
+
+        locationID.setText(d1.getValueAt(selectIndex, 0).toString());
+        jComboBox2.setSelectedItem(d1.getValueAt(selectIndex, 1).toString());
+        RoomNameTF1.setText(d1.getValueAt(selectIndex, 2).toString());
+        //lectureHallRB1.setSelected((boolean) d1.getValueAt(selectIndex, 2));
+        String roomType =(d1.getValueAt(selectIndex, 3).toString());
+
+       // String roomType = "Lecture Hall";
+        if (roomType.equals("Lecture Hall"))  {
+            lectureHallRB1.setSelected(true);
+        } else if(roomType.equals("Laboratory")) {
+            labRB1.setSelected(true);
+        }
+        else{
+            lectureHallRB1.setSelected(false);
+            labRB1.setSelected(false);
+        }
+        
+           capacityTF1.setText(d1.getValueAt(selectIndex, 4).toString());
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void clearButtonManagelocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonManagelocationActionPerformed
+        clearFields();
+    }//GEN-LAST:event_clearButtonManagelocationActionPerformed
+
+    private void updateButtonManageLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonManageLocationActionPerformed
+//        DefaultTableModel d1 =(DefaultTableModel)jTable1.getModel();
+//        int selectIndex =jTable1.getSelectedRow();
+//        int employeeid = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
+//        
+//             
+             String BuildingName = jComboBox2.getSelectedItem().toString();
+             String RoomName = RoomNameTF1.getText().toString();
+           // String department1 = Department1.getSelectedItem().toString();
+             String Capacity=capacityTF1.getText().toString();
+             
+             if (lectureHallRB1.isSelected()) {
+            type = "Lecture Hall";
+             }
+            if (labRB1.isSelected()) {
+                type = "Laboratory";
+            }
+            
+//              try{
+//            if(name1.equals("")){
+//                JOptionPane.showMessageDialog(null,"name is mondotory"); 
+//            } else if(faculty1.equals("select")){
+//            JOptionPane.showMessageDialog(null,"faculty is mondotory"); 
+//            }else if(department1.equals("select")){      
+//                 JOptionPane.showMessageDialog(null,"department is mondotory"); 
+//            }else if(cnter1.endsWith("select")){
+//                JOptionPane.showMessageDialog(null,"center is mondotory");
+//                
+//            }else if(Level1.endsWith("select")){
+//                JOptionPane.showMessageDialog(null,"Level is mondotory");
+//                
+//            }else if(bulding1.endsWith("select")){
+//                JOptionPane.showMessageDialog(null,"bulding is mondotory");
+//            }else{
+             
+       try {
+
+                Database.setData("update locations set buildingName='" + BuildingName + "', roomName='" + RoomName +"',roomType='"+type+ "' ,capacity ='" + Capacity + "'  where id= '" + jTable1.getValueAt(jTable1.getSelectedRow(), 0) + "'");
+                JOptionPane.showMessageDialog(null, "Location Details Updated Sucessfully !");
+                
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++" +e);
+            }
+           
+            locationLoadTable();
+    }//GEN-LAST:event_updateButtonManageLocationActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
+        int row = jTable1.getSelectedRow();
+
+        try {
+
+            if (row != -1) {
+
+                Database.setData("delete from locations where id ='" + dtm.getValueAt(row, 0) + "'");
+                JOptionPane.showMessageDialog(null, "Item Deleted Sucessfully !");
+                dtm.removeRow(row);
+                locationLoadTable();
+                clearFields();
+
+            } else {
+
+                JOptionPane.showMessageDialog(null, "Select Delete Item From Item Table !", " Item Not Selected !", 2);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void locationIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_locationIDActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField RoomNameTF;
+    private javax.swing.JTextField RoomNameTF1;
+    private javax.swing.JTextField capacityTF;
+    private javax.swing.JTextField capacityTF1;
+    private javax.swing.JButton clearButtonManagelocation;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JInternalFrame jInternalFrame2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JRadioButton labRB;
+    private javax.swing.JRadioButton labRB1;
+    private javax.swing.JRadioButton lectureHallRB;
+    private javax.swing.JRadioButton lectureHallRB1;
+    private javax.swing.JButton locationClearButton;
+    private javax.swing.JTextField locationID;
+    private javax.swing.JButton locationSaveButton;
+    private javax.swing.JButton updateButtonManageLocation;
     // End of variables declaration//GEN-END:variables
+
+    private void locationLoadTable() {
+        try {
+
+            TableColumnModel tcm = jTable1.getColumnModel();
+            // tcm.getColumn(8).setCellRenderer((TableCellRenderer) NumberRenderer.getCurrencyRenderer());
+            //tcm.getColumn(9).setCellRenderer((TableCellRenderer) NumberRenderer.getCurrencyRenderer());
+
+            DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
+            dtm.setRowCount(0);
+            ResultSet rs = Database.getData("SELECT * FROM locations");
+            while (rs.next()) {
+
+                Vector v = new Vector();
+                v.add(rs.getString("id"));
+                v.add(rs.getString("buildingName"));
+                v.add(rs.getString("roomName"));
+                v.add(rs.getString("roomType"));
+                v.add(rs.getString("capacity"));
+
+                dtm.addRow(v);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    private void clearFields(){
+        jComboBox1.setSelectedItem(null);
+        RoomNameTF.setText(null);
+        capacityTF.setText(null);
+        lectureHallRB.setSelected(false);
+        labRB.setSelected(false);
+        locationID.setText(null);
+        jComboBox2.setSelectedItem(null);
+        RoomNameTF1.setText(null);
+        lectureHallRB1.setSelected(false);
+        labRB1.setSelected(false);
+        capacityTF1.setText(null);
+        
+    }
 }
