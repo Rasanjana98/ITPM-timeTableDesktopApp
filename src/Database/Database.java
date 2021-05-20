@@ -8,41 +8,31 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 public class Database {
 
-       // create connection
-    public static Connection con;
+    public static Connection getConnection() {
 
-    public static Connection getConnection() throws Exception {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-        String dbpath = "jdbc:mysql://localhost:3306/timetablemanagementsystem";
-        String user = "root";
-        String pass = "1234";
+            String url = "jdbc:mysql://itpmdatabase.mysql.database.azure.com:3309/timetablemanagementsystem";
+            Connection con = DriverManager.getConnection(url, "itpm_we05@itpmdatabase", "20Kuruppu");
+            System.out.println("Database Connection Successfull!!");
+            return con;
+        } catch (Exception e) {
 
-          //timetablemanagementsystem
-//        try{
-//          File file = new File("e:\\RZKTechnology\\Configurations\\db_config.txt");
-//          dbpath = Files.readAllLines(file.toPath()).get(0);
-//          user = Files.readAllLines(file.toPath()).get(1);
-//          pass = Files.readAllLines(file.toPath()).get(2);
-//        
-//      } 
-//      catch(IOException e){
-//        System.out.println(e);
-//      }
-//        
-        if (con == null) {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(dbpath, user, pass);
+            JOptionPane.showMessageDialog(null, e);
+            return null;
         }
-
-        return con;
     }
 
-    //save update delete
-    public static void setData(String sql) throws Exception {
+
+//save update delete
+public static void setData(String sql) throws Exception {
         Database.getConnection().createStatement().executeUpdate(sql);
+        
     }
 
     // search

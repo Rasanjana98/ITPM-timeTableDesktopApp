@@ -5,6 +5,10 @@
  */
 package timetablemanagementsystem_we_r_05;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author geema
@@ -42,101 +46,252 @@ public class Home extends javax.swing.JFrame {
         locationButtonHome = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         statisticsButtonHome = new javax.swing.JButton();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        roomsButtonHome = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        ImageIcon icon = new ImageIcon(getClass().getResource("back.jpg"));
+        Image img = icon.getImage();
+        jDesktopPane1 = new javax.swing.JDesktopPane(){
+
+            public void paintComponent(Graphics g){
+                g.drawImage(img,0,0,getWidth(),
+                    getHeight(),this);
+            }
+        };
+        jLabel8 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(102, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setAutoscrolls(true);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tag.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
+        tagsButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        tagsButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tagsButtonHome.setText("TAGS");
         tagsButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tagsButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(tagsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 285, 64));
+        jPanel1.add(tagsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 280, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/student.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 40, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 30));
 
+        studentsButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        studentsButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         studentsButtonHome.setText("STUDENTS");
         studentsButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentsButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(studentsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 285, 64));
+        jPanel1.add(studentsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, 50));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/lectuer.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 40, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 40, 30));
 
+        lecturesButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        lecturesButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lecturesButtonHome.setText("LECTURERS");
         lecturesButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lecturesButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(lecturesButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 285, 64));
+        jPanel1.add(lecturesButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 280, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/books.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 40, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 40, 30));
 
+        sujectsButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        sujectsButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         sujectsButtonHome.setText("SUBJECTS");
         sujectsButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sujectsButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(sujectsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 285, 64));
+        jPanel1.add(sujectsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 280, 50));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/clock.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
-        workingdaysHoursButtonHome.setText("WORKING DAYS & HOURS");
+        workingdaysHoursButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        workingdaysHoursButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        workingdaysHoursButtonHome.setText("        WORKING DAYS & HOURS");
         workingdaysHoursButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 workingdaysHoursButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(workingdaysHoursButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 285, 64));
+        jPanel1.add(workingdaysHoursButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 280, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/location.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 40, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 40, 30));
 
+        locationButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        locationButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         locationButtonHome.setText("LOCATIONS");
         locationButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 locationButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(locationButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 285, 64));
+        jPanel1.add(locationButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 280, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/stats.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 590, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
+        statisticsButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        statisticsButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         statisticsButtonHome.setText("STATISTICS");
         statisticsButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statisticsButtonHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(statisticsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 285, 64));
+        jPanel1.add(statisticsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 280, 50));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/session.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setText("ADD SESSIONS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 280, 50));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/presentation.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 40, 40));
+
+        roomsButtonHome.setBackground(new java.awt.Color(204, 204, 204));
+        roomsButtonHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        roomsButtonHome.setText("ADD ROOMS");
+        roomsButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roomsButtonHomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(roomsButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 280, 50));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/not_available.png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setText("         NOT AVAILABLE TIMES");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 280, 50));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/allocate.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 620, -1, -1));
+
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setText("         SESSION ALLOCATIONS");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 280, 50));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/special.png"))); // NOI18N
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, -1, -1));
+
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setText("  SPECIAL SESSIONS");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 670, 280, 50));
+
+        jButton5.setBackground(new java.awt.Color(102, 0, 0));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 0));
+        jButton5.setText("HOME");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 730, 280, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel8.setText("Timetable Management ");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel14.setText("System");
+
+        jButton6.setBackground(new java.awt.Color(102, 0, 0));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 0));
+        jButton6.setText("Generate Timetable");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1217, Short.MAX_VALUE)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap(758, Short.MAX_VALUE)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(174, 174, 174))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                        .addComponent(jButton6)
+                        .addGap(139, 139, 139))))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(325, 325, 325)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addGap(36, 36, 36)
+                .addComponent(jButton6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jDesktopPane1.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,8 +304,8 @@ public class Home extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
             .addComponent(jDesktopPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
         );
 
         pack();
@@ -158,24 +313,78 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void studentsButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsButtonHomeActionPerformed
+   jDesktopPane1.removeAll();
+        try {
 
+            Students students = new Students();
+            jDesktopPane1.add(students).setVisible(true);
+            students.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } 
 
     }//GEN-LAST:event_studentsButtonHomeActionPerformed
 
     private void tagsButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tagsButtonHomeActionPerformed
         // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+        try {
+
+            Tags tags = new Tags();
+            jDesktopPane1.add(tags).setVisible(true);
+            tags.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }    
     }//GEN-LAST:event_tagsButtonHomeActionPerformed
 
     private void lecturesButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lecturesButtonHomeActionPerformed
         // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+        try {
+
+            Lectuer lecture = new Lectuer();
+            jDesktopPane1.add(lecture).setVisible(true);
+            lecture.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }        // TODO 
     }//GEN-LAST:event_lecturesButtonHomeActionPerformed
 
     private void sujectsButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sujectsButtonHomeActionPerformed
         // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+        try {
+
+            Subject subject = new Subject();
+            jDesktopPane1.add(subject).setVisible(true);
+            subject.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }        // T
     }//GEN-LAST:event_sujectsButtonHomeActionPerformed
 
     private void workingdaysHoursButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workingdaysHoursButtonHomeActionPerformed
         // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+        try {
+
+            Working_days_and_hours workdays = new Working_days_and_hours();
+            jDesktopPane1.add(workdays).setVisible(true);
+            workdays.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }       
     }//GEN-LAST:event_workingdaysHoursButtonHomeActionPerformed
 
     private void locationButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationButtonHomeActionPerformed
@@ -204,6 +413,107 @@ public class Home extends javax.swing.JFrame {
             e.printStackTrace();
 
         }    }//GEN-LAST:event_statisticsButtonHomeActionPerformed
+
+    private void roomsButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomsButtonHomeActionPerformed
+        // TODO add your handling code here:
+        jDesktopPane1.removeAll();
+
+        try {
+
+            Rooms rooms = new Rooms();
+            jDesktopPane1.add(rooms).setVisible(true);
+            rooms.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_roomsButtonHomeActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+
+        try {
+
+            Not_available_time_allocation not = new Not_available_time_allocation();
+            jDesktopPane1.add(not).setVisible(true);
+            not.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here
+        Home home = new Home();
+        this.hide();
+        home.setVisible(true);
+        
+                
+      
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+
+        try {
+
+            session session = new session();
+            jDesktopPane1.add(session).setVisible(true);
+            session.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+
+        try {
+
+            Sessions_allocations allocation = new Sessions_allocations();
+            jDesktopPane1.add(allocation).setVisible(true);
+            allocation.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+         jDesktopPane1.removeAll();
+
+        try {
+
+            Special_sessions special = new Special_sessions();
+            jDesktopPane1.add(special).setVisible(true);
+            special.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        
+        jDesktopPane1.removeAll();
+
+        try {
+
+            Timetables timetable = new Timetables();
+            jDesktopPane1.add(timetable).setVisible(true);
+            timetable.setSize(jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,17 +551,31 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton lecturesButtonHome;
     private javax.swing.JButton locationButtonHome;
+    private javax.swing.JButton roomsButtonHome;
     private javax.swing.JButton statisticsButtonHome;
     private javax.swing.JButton studentsButtonHome;
     private javax.swing.JButton sujectsButtonHome;
