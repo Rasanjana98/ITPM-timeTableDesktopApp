@@ -160,6 +160,26 @@ public class Rooms extends javax.swing.JPanel {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -187,6 +207,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton22.setText("Load Data");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,6 +296,26 @@ public class Rooms extends javax.swing.JPanel {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -302,6 +343,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton23.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton23.setText("Load Data");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,8 +379,8 @@ public class Rooms extends javax.swing.JPanel {
                     .addGroup(jInternalFrame2Layout.createSequentialGroup()
                         .addComponent(jButton23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(215, 215, 215))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
             .addGroup(jInternalFrame2Layout.createSequentialGroup()
                 .addGap(469, 469, 469)
                 .addComponent(jLabel17)
@@ -351,7 +393,6 @@ public class Rooms extends javax.swing.JPanel {
                 .addComponent(jLabel17)
                 .addGap(59, 59, 59)
                 .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jInternalFrame2Layout.createSequentialGroup()
                         .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,8 +407,9 @@ public class Rooms extends javax.swing.JPanel {
                             .addComponent(jButton6)
                             .addComponent(jButton7))
                         .addGap(63, 63, 63)
-                        .addComponent(jButton23)))
-                .addContainerGap(285, Short.MAX_VALUE))
+                        .addComponent(jButton23))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Add Room for tags", jInternalFrame2);
@@ -380,6 +422,26 @@ public class Rooms extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -417,6 +479,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton24.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton24.setText("Load Data");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -505,6 +568,26 @@ public class Rooms extends javax.swing.JPanel {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -532,6 +615,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton25.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton25.setText("Load Data");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -615,6 +699,26 @@ public class Rooms extends javax.swing.JPanel {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
@@ -649,6 +753,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton26.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton26.setText("Load Data");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -744,6 +849,26 @@ public class Rooms extends javax.swing.JPanel {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
@@ -778,6 +903,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton27.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton27.setText("Load Data");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -854,6 +980,7 @@ public class Rooms extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Add preferred rooms", jInternalFrame6);
 
+        jInternalFrame7.setBackground(new java.awt.Color(255, 255, 255));
         jInternalFrame7.setVisible(true);
 
         jLabel13.setText("Select session name");
@@ -868,6 +995,26 @@ public class Rooms extends javax.swing.JPanel {
 
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -905,6 +1052,7 @@ public class Rooms extends javax.swing.JPanel {
             }
         });
 
+        jButton28.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton28.setText("Load Data");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1948,25 +2096,25 @@ public class Rooms extends javax.swing.JPanel {
     
 
     public void resetValues() {
-        jComboBox1.setSelectedIndex(0);
-        jComboBox13.setSelectedIndex(0);
-        jComboBox7.setSelectedIndex(0);
-        jComboBox17.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);
-        jComboBox3.setSelectedIndex(0);
-        jComboBox4.setSelectedIndex(0);
-        jComboBox5.setSelectedIndex(0);
-        jComboBox6.setSelectedIndex(0);
+        jComboBox1.setSelectedIndex(-1);
+        jComboBox13.setSelectedIndex(-1);
+        jComboBox7.setSelectedIndex(-1);
+        jComboBox17.setSelectedIndex(-1);
+        jComboBox2.setSelectedIndex(-1);
+        jComboBox3.setSelectedIndex(-1);
+        jComboBox4.setSelectedIndex(-1);
+        jComboBox5.setSelectedIndex(-1);
+        jComboBox6.setSelectedIndex(-1);
 
-        jComboBox9.setSelectedIndex(0);
+        jComboBox9.setSelectedIndex(-1);
 
-        jComboBox8.setSelectedIndex(0);
+        jComboBox8.setSelectedIndex(-1);
 
-        jComboBox10.setSelectedIndex(0);
-        jComboBox12.setSelectedIndex(0);
-        jComboBox11.setSelectedIndex(0);
-        jComboBox14.setSelectedIndex(0);
-        jComboBox15.setSelectedIndex(0);
+        jComboBox10.setSelectedIndex(-1);
+        jComboBox12.setSelectedIndex(-1);
+        jComboBox11.setSelectedIndex(-1);
+        jComboBox14.setSelectedIndex(-1);
+        jComboBox15.setSelectedIndex(-1);
 
     }
 

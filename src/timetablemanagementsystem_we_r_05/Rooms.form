@@ -166,7 +166,7 @@
                 <Component class="javax.swing.JTable" name="jTable4">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="3" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Subject" type="java.lang.Object"/>
                         <Column editable="true" title="Room" type="java.lang.Object"/>
@@ -219,6 +219,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton22">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -253,7 +256,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -272,13 +275,13 @@
                               </Group>
                               <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jButton23" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane5" min="-2" pref="343" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
+                      <Component id="jScrollPane5" min="-2" pref="441" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="469" max="-2" attributes="0"/>
@@ -294,7 +297,6 @@
                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane5" min="-2" pref="307" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -314,8 +316,9 @@
                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                               <Component id="jButton23" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jScrollPane5" alignment="0" min="-2" pref="415" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="285" max="32767" attributes="0"/>
+                      <EmptySpace pref="177" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -363,7 +366,7 @@
                 <Component class="javax.swing.JTable" name="jTable5">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="3" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Tag Name" type="java.lang.Object"/>
                         <Column editable="true" title="Room Name" type="java.lang.Object"/>
@@ -416,6 +419,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton23">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -553,7 +559,7 @@
                 <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="3" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Lecturer Name" type="java.lang.Object"/>
                         <Column editable="true" title="Room Name" type="java.lang.Object"/>
@@ -614,6 +620,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton24">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -759,7 +768,7 @@
                 <Component class="javax.swing.JTable" name="jTable2">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="3" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Group Name" type="java.lang.Object"/>
                         <Column editable="true" title="Room Name" type="java.lang.Object"/>
@@ -812,6 +821,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton25">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -968,7 +980,7 @@
                 <Component class="javax.swing.JTable" name="jTable3">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="4">
+                      <Table columnCount="4" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Lecture" type="java.lang.Object"/>
                         <Column editable="true" title="Tute" type="java.lang.Object"/>
@@ -1035,6 +1047,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton26">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -1194,7 +1209,7 @@
                 <Component class="javax.swing.JTable" name="jTable6">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="4">
+                      <Table columnCount="4" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Subject" type="java.lang.Object"/>
                         <Column editable="true" title="Tag" type="java.lang.Object"/>
@@ -1261,6 +1276,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton27">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>
@@ -1279,6 +1297,9 @@
         </Container>
         <Container class="javax.swing.JInternalFrame" name="jInternalFrame7">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="visible" type="boolean" value="true"/>
           </Properties>
           <Constraints>
@@ -1399,7 +1420,7 @@
                 <Component class="javax.swing.JTable" name="jTable7">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="3" rowCount="24">
                         <Column editable="true" title="id" type="java.lang.Object"/>
                         <Column editable="true" title="Session" type="java.lang.Object"/>
                         <Column editable="true" title="Room" type="java.lang.Object"/>
@@ -1460,6 +1481,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton28">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Load Data"/>
               </Properties>
               <Events>

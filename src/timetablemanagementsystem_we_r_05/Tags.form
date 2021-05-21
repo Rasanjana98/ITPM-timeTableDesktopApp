@@ -477,7 +477,7 @@
                           <Component id="jLabel9" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
                           <Component id="SearchTag1" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="71" max="32767" attributes="0"/>
+                      <EmptySpace pref="68" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="322" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Component id="LoadTagDetailsToTable" min="-2" pref="51" max="-2" attributes="0"/>

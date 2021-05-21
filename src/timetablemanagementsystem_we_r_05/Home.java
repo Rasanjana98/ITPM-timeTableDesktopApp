@@ -236,7 +236,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(102, 0, 0));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 0));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("HOME");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,8 +253,8 @@ public class Home extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(102, 0, 0));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 0));
-        jButton6.setText("Generate Timetable");
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Generate Timetables");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -275,8 +275,8 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(jLabel14)
                         .addGap(174, 174, 174))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(jButton6)
-                        .addGap(139, 139, 139))))
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119))))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,7 +286,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addGap(36, 36, 36)
-                .addComponent(jButton6)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane1.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
